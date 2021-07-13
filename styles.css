@@ -1,0 +1,279 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@100&display=swap");
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #007a23;
+  --secondary-color: #cbf27d;
+  --accent1-color: #f7ffc2;
+  --accent2-color: white;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Kaushan Script", Helvetica, sans-serif, Lato;
+  --paragraph-font: "Raleway", Lato, Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #007a23; /* headlines on a white background */
+  --headline-color-on-color: #007a23; /* headlines on a colored background */
+  --paragraph-color-on-white: black; /* paragraph text on a white background */
+  --paragraph-color-on-color: #007a23; /* paragraph text on a colored background */
+  --paragraph-background-color: #f7ffc2;
+  --nav-link-color: #007a23;
+  --nav-background-color: #cbf27d;
+  --nav-hover-link-color: #cbf27d;
+  --nav-hover-background-color: #007a23;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-size: 1.1em;
+}
+
+#content {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--secondary-color);
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0;
+}
+
+.logo-image {
+  margin-left: 5px;
+  width: 200px;
+  height: 90%;
+  border: 5px solid var(--primary-color);
+  border-radius: 15px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav div {
+}
+
+nav a {
+  display: block;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 14px 2em;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: var(--heading-font);
+}
+
+nav a:hover {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr;
+  background-color: var(--accent2-color);
+  padding-bottom: 1.5em;
+}
+
+/* home grid */
+
+.top-half {
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.left-half {
+  grid-column: 1 / 2;
+  margin-left: 20px;
+}
+
+.right-half {
+  grid-column: 2 / 4;
+  background-color: var(--secondary-color);
+  margin: 4em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding-bottom: 1.5em;
+  box-shadow: 4px 4px 4px #999;
+}
+
+/* land grid */
+
+.mid-half {
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.bottom-half {
+  grid-column: 1 / 4;
+  background-color: var(--secondary-color);
+  margin: 0 20px;
+  border-radius: 15px;
+}
+
+.main-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--accent2-color);
+  margin: 40px;
+  padding: 0 20px 20px 20px;
+  border-radius: 15px;
+}
+
+.inner-main-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  height: 100px;
+  width: 300px;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  box-shadow: 4px 4px 4px #999;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--accent1-color);
+  line-height: 100px; /*or you could use 4em*/
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.main-header {
+  font-family: var(--heading-font);
+  font-size: 3em;
+  color: var(--primary-color);
+}
+
+.line {
+  height: 5px;
+  width: 500px;
+  margin-top: 50px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.text-box {
+  border: 4px solid var(--primary-color);
+  margin: 1.5em 1.5em;
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px 20px;
+}
+
+.home-image img {
+  width: 400px;
+  height: 300px;
+  border-radius: 18px;
+  box-shadow: 4px 4px 4px #999;
+}
+
+.land-image img,
+.people-image img {
+  width: 400px;
+  height: 300px;
+  margin: 0 0 0 30px;
+  border-radius: 18px;
+  border-style: solid;
+  border-color: var(--primary-color);
+}
+
+.home-image {
+  margin-top: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-size: 18px;
+  line-height: 0;
+}
+
+p {
+  font-family: var(--paragraph-font);
+  font-size: 20px;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+
+.main-card p {
+  font-size: 18px;
+}
+
+.mid-half h5 {
+  font-size: 25px;
+  color: var(--primary-color);
+}
+
+footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: var(--secondary-color);
+  padding: 0.6em 1.5em;
+  align-items: center;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: var(--heading-font);
+  margin: 0 5px;
+  height: 64px;
+  width: 64px;
+}
+
+footer #site-plan {
+  text-align: center;
+  padding: 0 0;
+  background-color: var(--accent2-color);
+  height: 64px;
+  width: 64px;
+}
+
+#site-plan p {
+  padding: 20px 2px;
+  margin: 0;
+  font-size: 15px;
+}
+
+.social {
+  display: flex;
+  justify-self: end;
+  align-items: center;
+}
